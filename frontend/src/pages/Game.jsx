@@ -97,6 +97,7 @@ const Game = () => {
 
     playerCopy = playerCopy.filter(item => item.Category.includes(Category));
 
+
     if (sex !== "All") { 
       playerCopy = playerCopy.filter(item => item.sex === sex);
     }
@@ -125,7 +126,7 @@ const Game = () => {
 
   useEffect(() => {
     applyfilter(); 
-  }, [sex, rank, forte,]);
+  }, [sex, rank, forte, Category]);
 
   const { ranks, fortes } = getFiltersByCategory(Category);
 
@@ -181,7 +182,7 @@ const Game = () => {
         <div className='grid grid-cols-5 gap-5 items-center pr-5'>
           {
             filterPlayer.map((item, index) => (
-              <PlayerItem key={index} id={item.playerId} image={item.imageUser} name={item.nameUser} price={item.price} />
+              <PlayerItem key={index} id={item.playerId} image={item.imageUser} name={item.nameUser} price={item.price} category={item.Category} />
             ))
           }
         </div>

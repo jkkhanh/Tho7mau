@@ -6,7 +6,7 @@ import avt from '../assets/avt.jpg';
 import { MdOutlineKeyboardVoice } from "react-icons/md";
 import { IoIosMale } from "react-icons/io";
 import { IoIosFemale } from "react-icons/io";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -44,7 +44,7 @@ const MyProfile = () => {
             </li>
             <li className='py-3 pl-5 flex items-center gap-2 hover:bg-blue-500 hover:text-white transition-all duration-300'>
               <span className='text-lg'><BiLogOut /></span>
-              <p className='font-semibold'>Đăng xuất</p>
+              <Link to = '/login' className='font-semibold'>Đăng xuất</Link>
             </li>
           </ul>
         </div>
